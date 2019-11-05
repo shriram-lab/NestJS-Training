@@ -17,6 +17,7 @@ export class CustomerService {
     // Get a single customer
     async getCustomer(customerID): Promise<Customer> {
         const customer = await this.customerModel.findById(customerID).exec();
+        console.log("hhhhh",customer)
         return customer;
     }
     // post a single customer
